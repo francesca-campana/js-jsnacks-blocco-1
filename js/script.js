@@ -15,9 +15,12 @@
 // }
 
 
-
-
 //*********************************//*********************************//
+
+// L’utente inserisce due parole in successione, con due
+// prompt. Il software stampa prima la parola più corta, poi la
+// parola più lunga.
+
 // var parolaUno = prompt('Inserisci una parola');
 // var parolaDue = prompt('Inserisci una parola');
 //
@@ -37,9 +40,11 @@
 
 //*********************************//*********************************//
 
-// Il software deve chiedere per 5 volte all’utente di inserire un numero di.
+// Il software deve chiedere per 5 volte all’utente di inserire un numero.
 // Il programma stampa la somma di tutti i numeri inseriti.
 // Esegui questo programma in due versioni, con il for e con il while.
+
+
 // var numeroUtente = parseInt(prompt('Inserisci un numero'));
 // console.log(numeroUtente);
 
@@ -47,20 +52,19 @@
 
 // var somma = 0;
 // for (var i = 0; i < 5; i++) {
-//   var numeroUtente = parseInt(prompt('Inserisci un numero di 4 cifre'));
+//   var numeroUtente = parseInt(prompt('Inserisci un numero'));
 //   somma += numeroUtente;
 //
 // }
-//console.log(somma);
+// console.log(somma);
 
 //Con Metodo While
 
 // var somma = 0;
 // var i = 0;
 // while (i < 5) {
-//   var numeroUtente = parseInt(prompt('Inserisci un numero di 4 cifre'));
+//   var numeroUtente = parseInt(prompt('Inserisci un numero'));
 //    somma += numeroUtente;
-//
 //
 //   i++
 // }

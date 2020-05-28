@@ -1,17 +1,24 @@
 //L’utente inserisce due numeri in successione, con due
 //prompt. Il software stampa il maggiore.
 
-// var numeroUno = parseInt(prompt('Inserisci un numero'));
-// var numeroDue = parseInt(prompt('Inserisci un numero'));
-// console.log(numeroUno);
-// console.log(numeroDue);
-// if (numeroUno > numeroDue ) {
+// var numeroUno = parseInt(prompt('Inserisci un primo numero'));
+// while (isNaN(numeroUno)) { //Fintanto che numeroUno non è un numero msg di errore
+//   numeroUno =  parseInt(prompt('Errore, inserisci primo numero'));
+//   console.log(numeroUno);
+// }
+//
+// var numeroDue = parseInt(prompt('Inserisci un secondo numero'));
+// while (isNaN(numeroDue)) { //Fintanto che numeroDue non è un numero msg di errore
+//   numeroDue =  parseInt(prompt('Errore, inserisci secondo numero'));
+//   console.log(numeroDue);
+// }
+// if (numeroUno > numeroDue ) { //Se il numeroUno è maggiore del numeroDue stampo numeroUno
 //   console.log('Il numero maggiore è ' + numeroUno);
-// }else if (numeroUno < numeroDue) {
+// }else if (numeroUno < numeroDue) { //Se il numeroUno è minore del numeroDue stampo numeroDue
 //   console.log('Il numero maggiore è ' + numeroDue);
 //
 // }else {
-//   console.log('I numeri sono pari');
+//   console.log('I numeri sono pari'); //Altrimenti i numri sono pari
 // }
 
 
@@ -21,21 +28,24 @@
 // prompt. Il software stampa prima la parola più corta, poi la
 // parola più lunga.
 
-// var parolaUno = prompt('Inserisci una parola');
-// var parolaDue = prompt('Inserisci una parola');
+// var parolaUno = prompt('Inserisci la prima parola'); //Chiedo la prima parola
 //
-// console.log(parolaUno);
-// console.log(parolaDue);
+// while (!isNaN(parolaUno)) { //Fintanto che la parolaUno è un numero si chiederà di riscrivere la prima parola
+//   parolaUno = prompt('Errore, Inserisci la prima parola');
 //
+// }
+// var parolaDue = prompt('Inserisci la seconda parola'); //Fintanto che la parolaDue è un numero si chiederà di riscrivere la seconda parola
+// while (!isNaN(parolaDue)) {
+//   parolaDue = prompt('Errore, Inserisci la seconda parola');
 //
-//
-// if (parolaUno.length < parolaDue.length) {
+// }
+// if (parolaUno.length < parolaDue.length) { //Se la parolaUno è minore della parolaDue stamperà la parolaUno
 //   console.log(parolaUno + ' - ' +  parolaDue);
 //
-// } else if (parolaUno.length > parolaDue.length) {
+// } else if (parolaUno.length > parolaDue.length) { //Se la parolaUno è maggiore della parolaDue stamperà la parolaDue
 //   console.log(parolaDue + ' - ' + parolaUno);
 // }else {
-//   console.log('le parole sono uguali');
+//   console.log('le parole sono uguali'); //Altrimenti la lunghezza delle parole sarà pari
 // }
 
 //*********************************//*********************************//
@@ -44,31 +54,39 @@
 // Il programma stampa la somma di tutti i numeri inseriti.
 // Esegui questo programma in due versioni, con il for e con il while.
 
-
-// var numeroUtente = parseInt(prompt('Inserisci un numero'));
-// console.log(numeroUtente);
-
 //Con Metodo For
-
+// var numeroUtente = parseInt(prompt('Inserisci un numero')); //Chiedo di inserire un numero
+// console.log(numeroUtente);
+//
+// while (isNaN(numeroUtente)) { //Fintanto che il dato non è un numero
+//   numeroUtente = parseInt(prompt('Errore, Inserisci un numero')); // Richiederò di inserire il numero
+// }
 // var somma = 0;
-// for (var i = 0; i < 5; i++) {
-//   var numeroUtente = parseInt(prompt('Inserisci un numero'));
-//   somma += numeroUtente;
+// for (var i = 0; i < 5; i++) { //Attraverso il ciclo chiederà di inserire il numero per 5 volte
+//    numeroUtente = parseInt(prompt('Inserisci un numero'));
+//   somma += numeroUtente; //facendo la somma dei numeri inseriti correttamente per le 5 volte richieste
 //
 // }
 // console.log(somma);
 
-//Con Metodo While
+//Con Metodo do While
 
+//Dichiaro le mie variabili
+// var numeroUtente = parseInt(prompt('Inserisci un numero'));
 // var somma = 0;
 // var i = 0;
-// while (i < 5) {
-//   var numeroUtente = parseInt(prompt('Inserisci un numero'));
-//    somma += numeroUtente;
 //
+// do {
+//   numeroUtente = parseInt(prompt(' Inserisci un numero'));
+//   somma += numeroUtente;
+//   console.log(somma);
 //   i++
+//
+// }while (i < 5)  {
+//
 // }
-// console.log(somma);
+//
+// console.log( 'La somma dei 5 numeri inseriti è ' + somma);
 
 
 //*********************************//*********************************//

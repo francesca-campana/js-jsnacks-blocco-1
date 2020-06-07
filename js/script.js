@@ -115,20 +115,139 @@
 // Chiedi un numero di 4 cifre all’utente e calcola la somma di tutte le cifre
 // che compongono il numero.
 
-var numero = prompt('Digita un numero di 4 cifre');
-numero = numero.trim();
+// var numero = prompt('Digita un numero di 4 cifre');
+// numero = numero.trim();
+//
+// while ((numero.length !== 4) || isNaN(numero)) {
+//     numero = prompt('Digita un numero di 4 cifre');
+//     numero = numero.trim();
+//
+// }
+// // numeroSplit = numero.split(''); //Posso evitare lo split e iterare direttamente la stringa
+// // console.log(numeroSplit);
+//
+// somma = 0;
+// for (var i = 0; i < numero.length; i++) {
+// // console.log(numeroIntero.length);
+//   somma+= parseInt(numero[i]);
+// }
+// console.log(somma);
 
-while ((numero.length !== 4) || isNaN(numero)) {
-    numero = prompt('Digita un numero di 4 cifre');
-    numero = numero.trim();
+//*********************************//*********************************//
+// Fai inserire un numero, che chiameremo N, all’utente.
+//Genera N array,ognuno formato da 10 numeri casuali tra 1 e 100.
+//  Ogni volta che ne crei uno, stampalo a schermo.
+
+// var numeroUtente = parseInt(prompt('inserisci un numero per popolare un array'));
+// for (var i = 0; i < numeroUtente; i++) {
+//   var arrayGenerato = generatoreNArray();
+//   console.log(arrayGenerato);
+// }
+//
+//
+// function generatoreNArray(){
+// var listaarray = [];
+//   for (var i = 0; i < 10; i++) {
+//
+//   var numeroGenerato = Math.floor(Math.random() * 100) + 1;
+//   listaarray.push(numeroGenerato);
+//
+//   }
+// return listaarray;
+// }
+//*********************************//*********************************//
+// Generatore di “nomi cognomi” casuali: prendendo una lista di nomi e
+// una lista di cognomi, Gatsby vuole generare una falsa lista di invitati.
+// var listaNomifalso = 4;
+//
+//
+// // Lista nomi
+// var nomi = ['Francesca','Gilda', 'Bruna', 'Maria'];
+//
+// // Lista cognomi
+// var cognomi = ['Campana','Benda','Lamalfa','Deangelis'];
+//
+// //Lista nuovaListaFalsa
+// var nuovaListaFalsa = [];
+//
+// //Genero una falsa lista di invitati
+// for (var i = 0; i < listaNomifalso; i++) {
+//   //elemento preso a caso dalla lista dei nomi
+//   var indiceNomiRandom = Math.floor(Math.random() * nomi.length);
+//   var nomiRandom = nomi[indiceNomiRandom];
+//
+//   //elemento preso a caso dalla lista dei cognomi
+//   var indiceCognomiRandom = Math.floor(Math.random() * cognomi.length);
+//   var cognomiRandom = cognomi[indiceCognomiRandom];
+//
+//   //Creo un nome falso  concatenando  un 'nomeRandom' ad un'cognomeRandom
+//   var nomeFalso = nomiRandom + '-' + cognomiRandom;
+//
+//   nuovaListaFalsa.push(nomeFalso);
+//
+// }
+//
+// //Stampo la nuova falsa lista
+// console.log(nuovaListaFalsa);
+
+//-------------//
+
+
+
+// Crea due array che hanno un numero di elementi diversi.
+// Aggiungi elementi casuali all’array che ha meno elementi,
+// fino a quando ne avrà tanti quanti l’altro.
+
+//Creo due array che abbiano all'interno un numero di elementi differenti
+var primoArray = [1, 2, 3, 4, 5, 50, 90, 'giovanni', 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var secondoArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var primoArrayLunghezza = primoArray.length;
+var secondoArrayLunghezza = secondoArray.length;
+
+// var arraynuovoTest = riempiArray(secondoArray, 20);
+// console.log(arraynuovoTest);
+
+
+
+if (primoArrayLunghezza < secondoArrayLunghezza) {
+  primoArray = riempiArray(primoArray, secondoArrayLunghezza);
+  console.log(primoArray);
+} else if (primoArrayLunghezza > secondoArrayLunghezza) {
+  secondoArray = riempiArray(secondoArray, primoArrayLunghezza);
+  console.log(secondoArray);
+}else {
+  console.log ('Sono di uguale lunghrezza');
+}
+//Aggiungere elementi casuali ad un array
+//creerò una funzione che mi permetta di generare dei numeri casuali ed inserirli
+//in un 'arrayDaRiempire' fintanto che si raggiunga la 'lunghezzaArray' 
+
+function riempiArray (arrayDaRiempire, lunghezzaArray) {
+
+  while (arrayDaRiempire.length < lunghezzaArray) {
+    var numeriCasuali = Math.floor(Math.random() * 100) + 1;
+    arrayDaRiempire.push(numeriCasuali);
+    console.log(arrayDaRiempire);
+  }
+  return arrayDaRiempire;
 
 }
-// numeroSplit = numero.split(''); //Posso evitare lo split e iterare direttamente la stringa
-// console.log(numeroSplit);
 
-somma = 0;
-for (var i = 0; i < numero.length; i++) {
-// console.log(numeroIntero.length);
-  somma+= parseInt(numero[i]);
-}
-console.log(somma);
+//------------------------------//
+
+// Crea due tag div con due id diversi: un div avrà
+// il testo colorato di rosso mentre l’altro di verde.
+// Partendo da un array di numeri, stampiamo nell’id rosso
+// i numeri dispari e in verde i numeri pari.
+
+//Creo un Array di numeri
+// var numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// var numeriElement = numeri[i];
+//
+// for (var i = 0; i < numeri.length; i++) {
+//   if (numeri[i] % 2 === 0) {
+//   document.getElementById('rosso').innerHTML += numeri[i] + '<br>';
+//   }else {
+//   document.getElementById('verde').innerHTML += numeri[i] + '<br>';
+//   }
+// }

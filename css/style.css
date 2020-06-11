@@ -1,4 +1,4 @@
-.pink {
+/* .pink {
   color: pink;
 }
 
@@ -10,4 +10,33 @@
 }
 #verde {
   color: green;
+} */
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.wrapper{
+  display: flex;
+  flex-wrap: wrap;
+
+
+}
+.box {
+  border: 1px solid blue;
+  width: 200px;
+  height: 200px;
+  flex-basis: calc( 100% / 10 );
+}
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.yellow {
+  background-color: yellow;
+}
+.pink {
+  background-color: pink;
 }

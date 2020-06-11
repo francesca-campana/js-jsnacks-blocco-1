@@ -192,49 +192,49 @@
 
 //-------------//
 
-
-
-// Crea due array che hanno un numero di elementi diversi.
-// Aggiungi elementi casuali all’array che ha meno elementi,
-// fino a quando ne avrà tanti quanti l’altro.
-
-//Creo due array che abbiano all'interno un numero di elementi differenti
-var primoArray = [1, 2, 3, 4, 5, 50, 90, 'giovanni', 1, 2, 3, 4, 5, 6, 7, 8, 9];
-var secondoArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-var primoArrayLunghezza = primoArray.length;
-var secondoArrayLunghezza = secondoArray.length;
-
-// var arraynuovoTest = riempiArray(secondoArray, 20);
-// console.log(arraynuovoTest);
-
-
-
-if (primoArrayLunghezza < secondoArrayLunghezza) {
-  primoArray = riempiArray(primoArray, secondoArrayLunghezza);
-  console.log(primoArray);
-} else if (primoArrayLunghezza > secondoArrayLunghezza) {
-  secondoArray = riempiArray(secondoArray, primoArrayLunghezza);
-  console.log(secondoArray);
-}else {
-  console.log ('Sono di uguale lunghrezza');
-}
-//Aggiungere elementi casuali ad un array
-//creerò una funzione che mi permetta di generare dei numeri casuali ed inserirli
-//in un 'arrayDaRiempire' fintanto che si raggiunga la 'lunghezzaArray' 
-
-function riempiArray (arrayDaRiempire, lunghezzaArray) {
-
-  while (arrayDaRiempire.length < lunghezzaArray) {
-    var numeriCasuali = Math.floor(Math.random() * 100) + 1;
-    arrayDaRiempire.push(numeriCasuali);
-    console.log(arrayDaRiempire);
-  }
-  return arrayDaRiempire;
-
-}
+//
+//
+// // Crea due array che hanno un numero di elementi diversi.
+// // Aggiungi elementi casuali all’array che ha meno elementi,
+// // fino a quando ne avrà tanti quanti l’altro.
+//
+// //Creo due array che abbiano all'interno un numero di elementi differenti
+// var primoArray = [1, 2, 3, 4, 5, 50, 90, 'giovanni', 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// var secondoArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// var primoArrayLunghezza = primoArray.length;
+// var secondoArrayLunghezza = secondoArray.length;
+//
+// // var arraynuovoTest = riempiArray(secondoArray, 20);
+// // console.log(arraynuovoTest);
+//
+//
+//
+// if (primoArrayLunghezza < secondoArrayLunghezza) {
+//   primoArray = riempiArray(primoArray, secondoArrayLunghezza);
+//   console.log(primoArray);
+// } else if (primoArrayLunghezza > secondoArrayLunghezza) {
+//   secondoArray = riempiArray(secondoArray, primoArrayLunghezza);
+//   console.log(secondoArray);
+// }else {
+//   console.log ('Sono di uguale lunghrezza');
+// }
+// //Aggiungere elementi casuali ad un array
+// //creerò una funzione che mi permetta di generare dei numeri casuali ed inserirli
+// //in un 'arrayDaRiempire' fintanto che si raggiunga la 'lunghezzaArray'
+//
+// function riempiArray (arrayDaRiempire, lunghezzaArray) {
+//
+//   while (arrayDaRiempire.length < lunghezzaArray) {
+//     var numeriCasuali = Math.floor(Math.random() * 100) + 1;
+//     arrayDaRiempire.push(numeriCasuali);
+//     console.log(arrayDaRiempire);
+//   }
+//   return arrayDaRiempire;
+//
+// }
 
 //------------------------------//
-
+// SNACK N° 9
 // Crea due tag div con due id diversi: un div avrà
 // il testo colorato di rosso mentre l’altro di verde.
 // Partendo da un array di numeri, stampiamo nell’id rosso
@@ -251,3 +251,75 @@ function riempiArray (arrayDaRiempire, lunghezzaArray) {
 //   document.getElementById('verde').innerHTML += numeri[i] + '<br>';
 //   }
 // }
+
+//------------------------------//
+// L’utente ha a disposizione un input in cui inserire un nome di un giocatore
+// e una select tramite la quale puoi scegliere se il giocatore va inserito tra
+// i titolari o tra le riserve.
+// Quando si clicca sul button “Aggiungi” il nome viene aggiunto nella lista dei
+// titolari se l’utente ha scelto titolari, altrimenti tra le riserve.
+
+// $(document).ready(function (){
+//   $('.btn-aggiungi').click(
+//     function () {
+//       var nomeGiocatore = $ ('#nome-aggiunto').val();
+//       // console.log(nomeGiocatore);
+//       var titolariORiserve = $ ('#titolari-riserve').val();
+//       // console.log(titolariORiserve);
+//       var nomeAppendere = '<li>' + nomeGiocatore + '<button class="btn-elimina">Elimina</button>' + '</li>';
+//       // console.log(nomeAppendere);
+//
+//       if (titolariORiserve === 'titolare') {
+//         $('#lista-titolare ul').append(nomeAppendere);
+//       }else if (titolariORiserve === 'riserva') {
+//         $('#lista-riserve ul').append(nomeAppendere);
+//       }
+//
+//     });
+//
+//     $(document).on('click', '.btn-elimina',
+//     function (){
+//       $(this).parent().remove();
+//     }
+//     );
+//
+//   }
+// );
+// --------------------//
+// Creare 10 quadrati vuoti.
+// Con jQuery, dentro ognuno scrivere un numero
+// random
+
+// $(document).ready(function(){
+//
+//   var numeroQuadrati = 10;
+//   for (var i = 0; i < numeroQuadrati; i++) {
+//   $('.wrapper').append('<div class="box"></div>');
+//   var index = numeroQuadrati[i];
+//   }
+//
+//   $('.box').each(
+//     function(index){
+//     // $(this).text(getRndInteger(1, 100));
+//
+//       if (index % 2 === 0) {
+//         $(this).addClass('red');
+//         // console.log($('.box').addClass('red'));
+//
+//       }else{
+//         $(this).addClass('green');
+//         // console.log($('.box').addClass('green'));
+//       }
+//
+//     });
+//   $(document).on('click', '.box',
+//     function(){
+//       $(this).text(getRndInteger(1, 100));
+//
+//
+//     });
+//
+// });
+// function getRndInteger(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
